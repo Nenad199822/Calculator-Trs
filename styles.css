@@ -17,10 +17,10 @@ body {
 
 .screen {
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 100px;
-    background-color: royalblue;
-    margin-top: 20px;
+    background-color: rgb(173, 161, 168);
+    margin-top: 25px;
 }
 
 .first-section {
@@ -28,4 +28,18 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    margin-top: 20px;
+}
+
+.first-two-buttons button {
+    width: 80px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: #c8102E;
+    font-size: 20px;
+}
+
+.first-two-buttons {
+    justify-content: space-around;
+
 }
