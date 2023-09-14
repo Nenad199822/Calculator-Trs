@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 500px;
+    height: 600px;
+    background-color: blanchedalmond;
+    align-items: center;
+}
+
+.screen {
+    display: flex;
+    width: 80%;
+    height: 100px;
+    background-color: royalblue;
+    margin-top: 20px;
+}
+
+.first-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
