@@ -44,14 +44,16 @@ body {
 
 }
 
-.first-row {
-    margin-top: 20px;
+.first-row,
+.second-row {
+    margin-top: 35px;
     display: flex;
     width: 80%;
     justify-content: space-around;
 }
 
-.first-row button {
+.first-row button,
+.second-row button {
     width: 80px;
     height: 60px;
     font-size: 30px;
