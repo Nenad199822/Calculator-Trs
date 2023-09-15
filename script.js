@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let clear = document.querySelector('.clear')
+    let equal = document.querySelector('.operator-equal')
+    let numbers = document.querySelectorAll('.numbers')
+    let operators = document.querySelectorAll('.operator')
 
 })
 function add(a, b) {
