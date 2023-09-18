@@ -12,9 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentScreen = document.querySelector('.current')
     numbers.forEach((number) => number.addEventListener('click', function (e) {
         handleNumber(e.target.textContent)
-        currentScreen.textContent = currentValue
-    }))
+        currentScreen.textContent = currentValue + " " + operator
+        previousScreen.textContent = previousValue;
 
+    }))
+    operators.forEach((op) => op.addEventListener('click', function (e) {
+        handleOperator(e.target.textContent)
+        previousScreen.textContent = previousValue + " " + operator;
+        currentScreen.textContent = currentValue;
+    }))
 })
 function add(a, b) {
     return a + b;
@@ -28,9 +34,17 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
+
+
 function handleNumber(num) {
     if (currentValue.length < 5) {
-        currentValue += num
+        currentValue += num;
     }
+
+}
+function handleOperator(op) {
+    operator = op;
+    previousValue = currentValue;
+    currentValue = '';
 
 }
