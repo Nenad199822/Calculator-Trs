@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentScreen = document.querySelector('.current')
     numbers.forEach((number) => number.addEventListener('click', function (e) {
         handleNumber(e.target.textContent)
-        currentScreen.textContent = currentValue + " " + operator
-        previousScreen.textContent = previousValue;
+        currentScreen.textContent = currentValue;
+
 
     }))
     operators.forEach((op) => op.addEventListener('click', function (e) {
