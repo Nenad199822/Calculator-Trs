@@ -103,5 +103,12 @@ function operate(currentValue, operator, previousValue) {
             result = divide(previousValue, currentValue)
             break;
     }
-    return result.toFixed(3);
+    if (typeof result === 'string') {
+        result = parseFloat(result);
+    }
+    if (result.toString().split('.')[1]?.length > 3) {
+        result = result.toFixed(3);
+    }
+
+    return result;
 }
