@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
     equal.addEventListener('click', function () {
-        result = operate(parseFloat(currentValue), operator, parseFloat(previousValue))
-        currentValue = result;
-        previousValue = ''
-        previousScreen.textContent = previousValue;
-        currentScreen.textContent = currentValue;
+        if (currentValue != "" && previousValue != " ") {
+            result = operate(parseFloat(currentValue), operator, parseFloat(previousValue))
+            currentValue = result;
+            previousValue = ''
+            previousScreen.textContent = previousValue;
+            currentScreen.textContent = currentValue;
+        }
     })
-
-
 })
 
 function handleNumber(num) {
