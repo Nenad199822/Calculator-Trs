@@ -4,6 +4,7 @@ let currentValue = ""
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    let del = document.querySelector('.delete')
     let clear = document.querySelector('.clear')
     let equal = document.querySelector('.operator-equal')
     let numbers = document.querySelectorAll('.number')
@@ -21,6 +22,26 @@ document.addEventListener('DOMContentLoaded', function () {
         previousScreen.textContent = previousValue + " " + operator;
         currentScreen.textContent = currentValue;
     }))
+    clear.addEventListener('click', function () {
+        previousValue = '';
+        operator = ' '
+        currentValue = ''
+        previousScreen.textContent = previousValue;
+        currentScreen.textContent = currentValue;
+    })
+    del.addEventListener('click', function () {
+        currentValue = currentValue.slice(0, -1)
+        currentScreen.textContent = currentValue;
+        if (currentValue < 1) {
+            currentValue = previousValue + " " + operator
+            previousValue = " "
+            previousScreen.textContent = previousValue
+            currentScreen.textContent = currentValue;
+            operator = operator.slice(0, -1)
+            currentValue = currentValue.slice(0, -1)
+        }
+    })
+
 })
 function add(a, b) {
     return a + b;
