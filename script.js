@@ -103,5 +103,5 @@ function operate(currentValue, operator, previousValue) {
             result = divide(previousValue, currentValue)
             break;
     }
-    return result;
+    return result.toFixed(3);
 }
